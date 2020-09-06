@@ -1,18 +1,20 @@
 const fs = require('fs')
 const process = require('process')
 
-fs.readFile(process.argv[2], 'utf8', (err, data) => {
-  if (err) {
-    throw err
-  } else {
-    console.log(data)
+const copy = (originalFile, copyFile) => {
+  fs.readFile(originalFile, 'utf8', (err, data) => {
+    if (err) {
+      console.error('error')
+    } else {
+      fs.writeFile(copyFile, data, (err) => {
+        if (err || data === undefined) {
+          console.error('error')
+        } else {
+          console.log('success')
+        }
+      })
+    }
+  })
+}
 
-    fs.writeFile(process.argv[3], data, (err) => {
-      if (err) {
-        throw err
-      } else {
-        console.log('The file has been saved.')
-      }
-    })
-  }
-})
+copy(process.argv[2], 'copy.txt')
