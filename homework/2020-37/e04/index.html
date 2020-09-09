@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>HTML5 Page</title>
+</head>
+<body>
+<script>
+    console.log(this)
+    console.log(this == window)
+
+    // These three appears as the window object's keys and their values when for looping window
+    this.key1 = "donald duck"
+    window.key2 = "mickey mouse"
+    var key3 = "uncle scrooge"
+
+    for (const key in this) {
+      if (this.hasOwnProperty(key)) {
+        document.write('key = ' + key + '<br />' + 'value = ' + this[key] + '<br />'); 
+      }
+    }
+
+</script>
+</body>
+</html>
