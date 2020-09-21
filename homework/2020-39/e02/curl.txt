@@ -1,0 +1,8 @@
+Fetch location with id 1:
+curl -X GET http://localhost:8080/locations/1/
+
+Delete location with id 1:
+curl -X DELETE http://localhost:8080/locations/1/
+
+Add new location with some latitude and longitude values:
+curl -H "Content-type: application/json" -d "{\"lat\":-31, \"lon\":31}" http://localhost:8080/locations/
