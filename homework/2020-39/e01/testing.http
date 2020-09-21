@@ -1,0 +1,26 @@
+GET http://koti.tamk.fi/~pohjus/hello.txt
+
+### 
+
+GET http://koti.tamk.fi/~pohjus/rest/1.php
+
+# This is one has Content-Type value of "text/html" so browser will display the HTML code properly.
+
+###
+
+GET http://koti.tamk.fi/~pohjus/rest/2.php
+
+# This is one has Content-Type value of "text/plain" so browser will display the content of the HTTP request as it is, as plain text.
+
+###
+
+POST http://koti.tamk.fi/~pohjus/rest/3.php
+Content-type: text/html
+
+Here is some data for you
+
+###
+
+GET https://swapi.dev/api/people/1/
+
+# Content-Type is "application/json".
