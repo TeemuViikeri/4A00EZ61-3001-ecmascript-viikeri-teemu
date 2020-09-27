@@ -8,7 +8,7 @@ function success (position) {
   const lat = position.coords.latitude
   const lon = position.coords.longitude
 
-  const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=9463abcfb1640a1702fa38e78a189530&units=metric`
+  const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid={API key}&units=metric`
 
   console.log(url)
 
